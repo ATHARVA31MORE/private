@@ -1,0 +1,134 @@
+.wrap {
+  width: 100%;
+  max-width: 420px;
+  padding: 0 20px;
+  cursor: pointer;
+}
+
+.card {
+  width: 100%;
+  background: var(--glass-bg);
+  border: var(--glass-border);
+  border-radius: var(--radius-card);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  box-shadow: 0 8px 40px rgba(255, 107, 157, 0.3);
+  padding: 44px 28px;
+  min-height: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.stageWrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  width: 100%;
+  text-align: center;
+  position: relative;
+}
+
+.pre {
+  font-size: 0.92rem;
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.guessedLabel {
+  font-size: 1rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.72);
+  margin-top: 8px;
+}
+
+.guessName {
+  font-family: var(--font-script);
+  font-size: 2.6rem;
+  font-weight: 700;
+  color: #FFD6EC;
+  text-shadow: 0 0 28px rgba(255, 107, 157, 0.72), 0 0 54px rgba(200, 80, 192, 0.4);
+  line-height: 1.2;
+}
+
+.tap {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.3);
+  margin-top: 6px;
+  animation: blink 1.6s ease-in-out infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 0.28; }
+  50% { opacity: 0.72; }
+}
+
+/* Stage 1 */
+.butText {
+  font-family: var(--font-script);
+  font-size: 3.4rem;
+  font-weight: 700;
+  color: #FFD6EC;
+  text-shadow: 0 0 32px rgba(255, 107, 157, 0.85);
+}
+
+.butSub {
+  font-size: 0.97rem;
+  color: rgba(255, 255, 255, 0.72);
+  line-height: 1.55;
+  max-width: 280px;
+}
+
+/* Stage 2 */
+.ring {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 107, 157, 0.55);
+  pointer-events: none;
+}
+
+.bigHeart {
+  font-size: 66px;
+  filter: drop-shadow(0 0 30px rgba(255, 107, 157, 0.95));
+  line-height: 1;
+}
+
+.isYou {
+  font-family: var(--font-script);
+  font-size: 3.2rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #FFD6EC, #FF6B9D, #C850C0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  filter: drop-shadow(0 0 22px rgba(255, 107, 157, 0.7));
+  line-height: 1.2;
+}
+
+.isYouSub {
+  font-size: 1rem;
+  color: rgba(255, 214, 236, 0.78);
+  font-style: italic;
+  font-weight: 400;
+}
+
+.continueBtn {
+  margin-top: 10px;
+  padding: 15px 30px;
+  border: none;
+  border-radius: var(--radius-btn);
+  background: linear-gradient(135deg, #FF6B9D, #C850C0);
+  color: #fff;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 6px 24px rgba(200, 80, 192, 0.42);
+}

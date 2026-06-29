@@ -1,0 +1,56 @@
+/* ─── Global Reset & Base ─────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --font-body: 'Poppins', sans-serif;
+  --font-script: 'Dancing Script', cursive;
+
+  --color-pink: #FF6B9D;
+  --color-purple: #C850C0;
+  --color-lavender: #8B5CF6;
+  --color-deep: #4158D0;
+  --color-light-pink: #FFD6EC;
+  --color-white: #ffffff;
+  --color-white-80: rgba(255,255,255,0.8);
+  --color-white-60: rgba(255,255,255,0.6);
+  --color-white-20: rgba(255,255,255,0.2);
+  --color-white-10: rgba(255,255,255,0.1);
+
+  --glass-bg: rgba(255, 255, 255, 0.12);
+  --glass-border: 1px solid rgba(255, 255, 255, 0.25);
+  --glass-shadow: 0 8px 32px rgba(200, 80, 192, 0.25);
+  --glass-blur: blur(20px);
+
+  --radius-card: 28px;
+  --radius-btn: 50px;
+  --radius-input: 16px;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+body {
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Ctext y='20' font-size='20'%3E🩷%3C/text%3E%3C/svg%3E") 12 12, auto;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+#root {
+  height: 100%;
+  width: 100%;
+}
+
+/* ─── Scrollbar Hide ─────────────────────────────────────────── */
+::-webkit-scrollbar { display: none; }
+* { scrollbar-width: none; -ms-overflow-style: none; }

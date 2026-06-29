@@ -1,0 +1,171 @@
+.wrap {
+  width: 100%;
+  max-width: 420px;
+  padding: 0 20px;
+  /* Full viewport height so card fills screen */
+  height: 100vh;
+  display: flex;
+  align-items: stretch;
+}
+
+.card {
+  width: 100%;
+  background: var(--glass-bg);
+  border: var(--glass-border);
+  border-radius: var(--radius-card);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  box-shadow: var(--glass-shadow);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  /* Card fills the wrap height */
+  max-height: calc(100vh - 40px);
+}
+
+/* ─── Hero image — fixed height, never scrolls ─── */
+.heroWrap {
+  position: relative;
+  width: 100%;
+  height: 130px;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.heroImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(26,5,51,0.3) 0%, rgba(26,5,51,0.88) 100%);
+}
+
+.heroCenter {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.topHeart {
+  font-size: 28px;
+  line-height: 1;
+}
+
+.heroTitle {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 0.5px;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.4);
+}
+
+/* ─── Scrollable body ─── */
+.body {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px 22px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  /* Custom scrollbar */
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255,107,157,0.4) transparent;
+}
+
+.body::-webkit-scrollbar {
+  width: 4px;
+}
+.body::-webkit-scrollbar-track {
+  background: transparent;
+}
+.body::-webkit-scrollbar-thumb {
+  background: rgba(255,107,157,0.4);
+  border-radius: 4px;
+}
+
+/* ─── Letter ─── */
+.letter {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.line {
+  font-size: 0.93rem;
+  color: rgba(255, 255, 255, 0.88);
+  line-height: 1.7;
+  margin: 0;
+}
+
+.spacer {
+  height: 10px;
+  margin: 0;
+}
+
+/* ─── Proposal question ─── */
+.question {
+  text-align: center;
+  padding: 18px 16px;
+  border-radius: 18px;
+  background: rgba(255, 107, 157, 0.12);
+  border: 1.5px solid rgba(255, 107, 157, 0.35);
+}
+
+.qText {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #fff;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* ─── Buttons ─── */
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  /* Stick to bottom of scroll area */
+  padding-bottom: 4px;
+}
+
+.yesBtn {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: var(--radius-btn);
+  background: linear-gradient(135deg, #FF6B9D, #C850C0);
+  color: #fff;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 6px 22px rgba(200, 80, 192, 0.4);
+  letter-spacing: 0.3px;
+}
+
+.thinkBtn {
+  width: 100%;
+  padding: 14px;
+  border-radius: var(--radius-btn);
+  border: 1.5px solid rgba(255, 255, 255, 0.22);
+  background: rgba(255, 255, 255, 0.07);
+  color: rgba(255, 255, 255, 0.8);
+  font-family: var(--font-body);
+  font-size: 0.97rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: border-color 0.25s, background 0.25s;
+}
+
+.thinkBtn:hover {
+  background: rgba(255, 255, 255, 0.12);
+}

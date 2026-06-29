@@ -1,0 +1,106 @@
+.app {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: linear-gradient(135deg, #1a0533 0%, #2d0a4e 25%, #1f0a3d 50%, #2a0d4a 75%, #150526 100%);
+  animation: bgShift 8s ease-in-out infinite alternate;
+}
+
+@keyframes bgShift {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ─── Ambient Orbs ─────────────────────────────────────────── */
+.orb1, .orb2, .orb3 {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.orb1 {
+  width: 350px;
+  height: 350px;
+  background: radial-gradient(circle, rgba(200, 80, 192, 0.35), transparent 70%);
+  top: -100px;
+  right: -80px;
+  animation: floatOrb 7s ease-in-out infinite;
+}
+
+.orb2 {
+  width: 280px;
+  height: 280px;
+  background: radial-gradient(circle, rgba(65, 88, 208, 0.3), transparent 70%);
+  bottom: -80px;
+  left: -60px;
+  animation: floatOrb 9s ease-in-out infinite reverse;
+}
+
+.orb3 {
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, rgba(255, 107, 157, 0.25), transparent 70%);
+  top: 40%;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: floatOrb 11s ease-in-out infinite;
+}
+
+@keyframes floatOrb {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33%       { transform: translate(10px, -15px) scale(1.05); }
+  66%       { transform: translate(-10px, 10px) scale(0.97); }
+}
+
+/* ─── Music Button ─────────────────────────────────────────── */
+.musicBtn {
+  position: fixed;
+  top: 18px;
+  right: 18px;
+  z-index: 100;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid rgba(255,255,255,0.25);
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  font-size: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 16px rgba(200, 80, 192, 0.2);
+  transition: background 0.3s;
+}
+
+.musicBtn:hover {
+  background: rgba(255,255,255,0.18);
+}
+
+/* ─── Screen Layout ─────────────────────────────────────────── */
+.screenWrap {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.screenInner {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-y: auto;
+  padding: 20px 0;
+}
